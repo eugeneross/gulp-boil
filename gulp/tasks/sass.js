@@ -21,7 +21,7 @@ gulp.task('sass', function() {
     .on('error', handleErrors)
     .pipe(autoprefixer('last 2 versions', '> 1%', 'ie 8'))
     // .pipe(uncss({
-    //         html: ['./public/index.html']
+    //         html: ['./app/index.html']
     //     }))
     .pipe(gulpif(!global.isProd, sourcemaps.write('.')))
     .pipe(gulp.dest(config.dest.styles))

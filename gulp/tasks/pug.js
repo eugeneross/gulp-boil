@@ -7,7 +7,7 @@ import browserSync from 'browser-sync';
 import config from '../config';
 
 gulp.task('pug', function buildHTML() {
-  return gulp.src(config.src.views)
+  return gulp.src(config.views.dir)
     .pipe(pug({
               pretty: true
           }))

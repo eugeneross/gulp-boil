@@ -7,10 +7,19 @@ const config = {
   browserPort: 3000,
   UIPort:      3001,
 
+  routes: {
+    dir:   './routes/',
+    index: './routes/index.js',
+    404:   './routes/404.js',
+  },
+
+  views: {
+    dir:   './views/**/*.pug',
+    index: './views/index.pug'
+  },
+
   src: {
     dir:    './src/',
-    index:  './src/views/index.pug',
-    views:  './src/views/**/*.pug',
     styles: './src/assets/styles/**/*.sass',
     js:     './src/assets/js/**/*.js',
     images: './src/assets/images/**/*.{jpeg,jpg,png,gif,svg}',

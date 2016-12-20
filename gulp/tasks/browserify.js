@@ -12,7 +12,7 @@ import browserify   from 'browserify';
 import babelify     from 'babelify';
 import uglify       from 'gulp-uglify';
 import browserSync  from 'browser-sync';
-import debowerify   from 'debowerify';
+//import debowerify   from 'debowerify';
 import handleErrors from '../util/handle-errors';
 import config       from '../config';
 
@@ -33,7 +33,7 @@ function buildScript(file, watch) {
   }
 
   bundler.transform(babelify);
-  bundler.transform(debowerify);
+  //bundler.transform(debowerify);
 
   function rebundle() {
     const stream = bundler.bundle();
