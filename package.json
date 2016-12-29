@@ -1,6 +1,6 @@
 {
   "name": "Numie",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "author": "Eugene Ross <eugene@numie.co>",
   "description": "Numie Splash",
   "license": "MIT",
@@ -48,7 +48,7 @@
     "prod": "NODE_ENV=production gulp prod",
     "dev": "gulp dev",
     "start": "gulp prod; node ./bin/www",
-    "deploy": "gcloud app deploy --version 0-9-0 --no-promote"
+    "deploy": "gcloud app deploy --version 0-9-1 --no-promote"
   },
   "dependencies": {
     "babel-core": "^6.3.15",
