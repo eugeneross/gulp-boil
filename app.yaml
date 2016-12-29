@@ -1,13 +1,13 @@
   api_version: 1
   runtime: nodejs
-  env: flex
+  # env: flex -- for Flexible Environment
+  vm: true # -- for Standard Environment
 
   health_check:
     enable_health_check: true
 
-
   automatic_scaling:
-    min_num_instances: 2
+    min_num_instances: 1
     max_num_instances: 20
     cool_down_period_sec: 120 # default value
     cpu_utilization:
@@ -15,13 +15,16 @@
 
   handlers:
 
-#  - url: /(.+)
-  #  static_files: app/\1
-  #  upload: app/(.*)
+  # - url: /(.+)
+  #   static_files: app/\1
+  #   upload: app/(.*)
 
-#  - url: /
-  #  static_files: app/index.html
-  #  upload: app/index.html
+   #- url: /
+  #   static_files: app/index.html
+  #   upload: app/index.html
+
+   - url: /.*
+     script: app.js
 
    - url: /assets
      static_dir: public/assets
